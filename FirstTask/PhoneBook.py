@@ -27,8 +27,8 @@ class PhoneBook(object):
             print('Surname: ')
             arr["surname"] = input()
 
-            print('Middlename: ')
-            arr["middlename"] = input()
+            print('Middle name: ')
+            arr["middleName"] = input()
 
             print('Personal phone: ')
             arr["personalPhone"] = input()
@@ -46,3 +46,8 @@ class PhoneBook(object):
 
     def getAllDataInJson(self):
         print(json.dumps(self.phoneBookList))
+
+    def exportDataInJson(self):
+        file = open('phoneBook.json', 'w')
+        file.write(json.dumps(self.phoneBookList))
+        file.close()

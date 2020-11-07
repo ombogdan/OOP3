@@ -4,5 +4,8 @@ from PhoneBook import PhoneBook
 if __name__ == '__main__':
     phoneBook = PhoneBook()
     phoneBook.setAllData()
-    # phoneBook.getAllData()
+    phoneBook.getAllDataInJson()
+    phoneBook.exportDataInJson()
+    del phoneBook
+
 
